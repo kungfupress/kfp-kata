@@ -1,19 +1,19 @@
 <?php
 /**
- * File: kfp-kata/include/cpt-kata-register.php
+ * File: kfp-kata/include/kata-cpt-register.php
  *
  * @package kfp_kata
  */
 
 defined( 'ABSPATH' ) || die();
 
-add_action( 'init', 'kfp_cpt_kata_register', 0 );
+add_action( 'init', 'kfp_kata_cpt_register', 0 );
 /**
  * Register Custom Post Type Kata
  *
  * @return void
- */ 
-function kfp_cpt_kata_register() {
+ */
+function kfp_kata_cpt_register() {
 
 	$labels = array(
 		'name'                  => _x( 'Katas', 'Post Type General Name', 'text_domain' ),
@@ -49,7 +49,7 @@ function kfp_cpt_kata_register() {
 		'description'         => __( 'Katas de programación', 'text_domain' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'editor' ),
-		'taxonomies'          => array( 'category', 'post_tag' ),
+		'taxonomies'          => array( 'kfp-cinturon', 'post_tag' ),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,
@@ -63,6 +63,5 @@ function kfp_cpt_kata_register() {
 		'publicly_queryable'  => true,
 		'capability_type'     => 'page',
 	);
-	register_post_type( 'kata', $args );
-
+	register_post_type( 'kfp-kata', $args );
 }

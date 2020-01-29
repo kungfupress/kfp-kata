@@ -21,6 +21,7 @@ defined( 'ABSPATH' ) || die();
 
 // Constantes que afectan a todos los ficheros del plugin.
 define( 'KFP_KATA_DIR', plugin_dir_path( __FILE__ ) );
+define( 'KFP_KATA_PLUGIN_FILE', __FILE__ );
 define( 'KFP_KATA_URL', plugin_dir_url( __FILE__ ) );
 $default_headers = array( 'Version' => 'Version' );
 $plugin_data     = get_file_data( __FILE__, $default_headers, 'plugin' );
@@ -30,3 +31,7 @@ define( 'KFP_KATA_VERSION', $plugin_data['Version'] );
 require_once KFP_KATA_DIR . 'include/activate.php';
 // Inicializa el plugin.
 require_once KFP_KATA_DIR . 'include/plugin-init.php';
+// Registra el CPT kata.
+require_once KFP_KATA_DIR . 'include/kata-cpt-register.php';
+// Registra la taxonomía cinturon.
+require_once KFP_KATA_DIR . 'include/nivel-tax-register.php';
