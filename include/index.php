@@ -2,7 +2,7 @@
 /**
  * Fichero en blanco por seguridad
  *
- * @package kfp_plugin_name
+ * @package kfp_kata
  */
 
 // Silence is golden.

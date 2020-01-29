@@ -1,19 +1,19 @@
 <?php
 /**
- * File: kfp-plugin-name/include/plugin-init.php
+ * File: kfp-kata/include/plugin-init.php
  *
- * @package kfp_plugin_name
+ * @package kfp_kata
  */
 
 defined( 'ABSPATH' ) || die();
 
-add_action( 'plugins_loaded', 'kfp_plugin_name_init' );
+add_action( 'plugins_loaded', 'kfp_kata_init' );
 /**
  * Inicializa el plugin
  *
  * @return void
  */
-function kfp_plugin_name_init() {
-	$translation_path = 'kfp-plugin-name/languages';
-	load_plugin_textdomain( 'kfp-plugin-name', false, $translation_path );
+function kfp_kata_init() {
+	$translation_path = 'kfp-kata/languages';
+	load_plugin_textdomain( 'kfp-kata', false, $translation_path );
 }

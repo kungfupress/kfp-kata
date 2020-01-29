@@ -1,14 +1,14 @@
-# KFP Plugin Name
+# KFP Kata
 
-Plugin Name es un plugin que hace tal y cual.
+Katas de programación
 
 ## Cómo utilizar el plugin
 
-Haz esto y lo otro
+Instala el plugin, crea katas y haz que tus alumnos la superen
 
 ## Cómo colaborar en este esfuerzo
 
-Puedes hacer esto y lo otro. Puedes dejar una reseña aquí o allí
+Pasando las katas, proponiendo nuevas katas, dando difusión al plugin, poniendo estrella en GitHub
 
 ## Capturas de pantalla
 

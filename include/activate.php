@@ -5,34 +5,34 @@
  * - crear tablas personalizadas
  * - crear registros iniciales en tablas personalizadas
  *
- * @package kfp_plugin_name
+ * @package kfp_kata
  */
 
 defined( 'ABSPATH' ) || die();
 
-register_activation_hook( KFP_PLUGIN_NAME_PLUGIN_FILE, 'kfp_plugin_name_create_options' );
+register_activation_hook( KFP_KATA_PLUGIN_FILE, 'kfp_kata_create_options' );
 /**
  * Crea o actualiza parámetros en la tabla options
  *
  * @return void
  */
-function kfp_plugin_name_activate() {
+function kfp_kata_activate() {
 	// Graba o actualiza la versión del plugin en las option de WordPress.
-	update_option( 'kfp_plugin_name_plugin_version', KFP_PLUGIN_NAME_VERSION );
+	update_option( 'kfp_kata_plugin_version', KFP_KATA_VERSION );
 	// Utiliza un array para contener el resto de opciones si son sencillas.
-	$kfp_plugin_name_options = array(
+	$kfp_kata_options = array(
 		'el_mejor_plugin_del_mundo' => true,
 	);
-	update_option( 'kfp_plugin_name_options', $kfp_plugin_name_options );
+	update_option( 'kfp_kata_options', $kfp_kata_options );
 }
 
-register_activation_hook( KFP_PLUGIN_NAME_PLUGIN_FILE, 'kfp_plugin_name_create_custom_tables' );
+register_activation_hook( KFP_KATA_PLUGIN_FILE, 'kfp_kata_create_custom_tables' );
 /**
  * Crea tablas personalizadas si son necesarias
  *
  * @return void
  */
-function kfp_plugin_name_create_custom_tables() {
+function kfp_kata_create_custom_tables() {
 	global $wpdb;
 	$sql             = array();
 	$tabla_1         = $wpdb->prefix . 'tabla_1';
