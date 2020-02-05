@@ -35,3 +35,5 @@ require_once KFP_KATA_DIR . 'include/plugin-init.php';
 require_once KFP_KATA_DIR . 'include/kata-cpt-register.php';
 // Registra la taxonomía cinturon.
 require_once KFP_KATA_DIR . 'include/nivel-tax-register.php';
+
+require_once KFP_KATA_DIR . 'include/kata-comment-form.php';
