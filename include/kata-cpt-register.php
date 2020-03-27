@@ -65,4 +65,12 @@ function kfp_kata_cpt_register() {
 		'capability_type'     => 'page',
 	);
 	register_post_type( 'kfp-kata', $args );
+	// Ejecuta flush_rewrite_rules() si es la primera vez que se define el CPT.
+	// Su misión es hacer que funcionen los permalinks del CPT.
+	// Evita que se ejecute más veces comprobando un campo option.
+	$check_option = get_option( 'post_type_kata_habilitado' );
+	if ( true !== $check_option ) {
+		flush_rewrite_rules( false );
+		update_option( 'post_type_kata_habilitado', true );
+	}
 }
