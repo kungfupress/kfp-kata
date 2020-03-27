@@ -16,9 +16,18 @@ add_filter( 'the_content', 'kfp_kata_comment_form' );
  * @return string
  */
 function kfp_kata_comment_form( $content ) {
+
+	// have_comments()
+	// wp_list_comments()
 	if ( is_singular( 'kfp-kata' ) ) {
-		$content .= '<h4>Aquí va el formulario</h4>';
-		$content .= '<p>Hola</p>';
+		$content .= comment_form();
 	}
+
+	ob_start();
+	comment_form();
+	$comment_form = ob_get_clean();
+	//insert code to modify $comment_form
+	$content .= $comment_form;
+
 	return $content;
 }
